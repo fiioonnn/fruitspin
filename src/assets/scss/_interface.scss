@@ -1,0 +1,110 @@
+.interface {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	position: relative;
+	width: 800px;
+	height: 500px;
+	background: #3a3d41;
+	border: 10px outset #808589;
+	&__slot,
+	&__overlay,
+	&__ladder {
+		grid-area: 1 / 1 / 2 / 2;
+		canvas {
+			display: block;
+		}
+	}
+	&__main {
+		display: grid;
+		place-items: center;
+	}
+	&__frame {
+		align-self: flex-end;
+		height: 35px;
+		border: 5px inset #565c61;
+		background: #70757b;
+		display: flex;
+		align-items: flex-end;
+		justify-content: center;
+		min-width: 100px;
+		padding: 0 10px;
+		position: relative;
+		color: gold;
+		font-size: 20px;
+		font-weight: 600;
+		user-select: none;
+		span {
+			font-size: 80%;
+			margin-bottom: 1px;
+		}
+		&::before {
+			content: attr(data-name) ":";
+			position: absolute;
+			bottom: calc(100% + 7px);
+			font-size: 12px;
+			color: #b0b3b6;
+			left: -5px;
+		}
+		&--right {
+			margin-left: auto;
+		}
+	}
+	&__slot {
+	}
+	&__overlay {
+	}
+	&__controls {
+		display: flex;
+		align-items: center;
+		background: #60666c;
+		padding: 10px;
+		gap: 10px;
+	}
+	&__button {
+		color: rgba(#ffffff, 0.9);
+		border: unset;
+		aspect-ratio: 1/1;
+		min-width: 50px;
+		max-width: 50px;
+		background: #909498;
+		border-radius: 3px;
+		border: 5px outset #b0b3b6;
+		font-size: 12px;
+		&:hover:not(.interface__button--disabled, .interface__button--active) {
+			cursor: pointer;
+			opacity: 0.9;
+		}
+		&:active:not(.interface__button--disabled) {
+			scale: 0.97;
+		}
+		&--disabled {
+			opacity: 0.5;
+		}
+		&--green {
+			background: #2da225;
+			border-color: #57b551;
+		}
+		&--blink:not(
+				:hover,
+				.interface__button--disabled,
+				.interface__button--active
+			) {
+			animation: blink 1s steps(2, end) infinite;
+		}
+		&--active {
+			border-style: inset;
+			color: rgba(#ffffff, 0.3);
+			scale: 0.97;
+		}
+		&--right {
+			margin-left: auto;
+		}
+	}
+}
+
+@keyframes blink {
+	100% {
+		opacity: 0.5;
+	}
+}

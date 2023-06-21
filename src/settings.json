@@ -1,0 +1,31 @@
+{
+	"version": "1.0.0",
+	"slot": {
+		"background": "#000000",
+		"width": 600,
+		"height": 390,
+		"reels": 3,
+		"rows": 5,
+		"rowsVisible": 3,
+		"fps": 120,
+		"symbols": {
+			"cherry": {
+				"image": "images/cherry.png",
+				"multiplier": 2.6666666667
+			},
+			"plum": {
+				"image": "images/plum.png",
+				"multiplier": 2.6666666667
+			},
+			"orange": {
+				"image": "images/orange.png",
+				"multiplier": 2.6666666667
+			},
+			"bell": {
+				"image": "images/bell.png",
+				"multiplier": 4
+			}
+		}
+	},
+	"debug": false
+}

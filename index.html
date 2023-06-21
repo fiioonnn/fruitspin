@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>fruitspin</title>
+	</head>
+	<body>
+		<div class="interface">
+			<div class="interface__main">
+				<div class="interface__slot">
+					<canvas id="slot"></canvas>
+				</div>
+				<div class="interface__ladder">
+					<canvas id="ladder"></canvas>
+				</div>
+				<div class="interface__overlay">
+					<canvas id="overlay"></canvas>
+				</div>
+			</div>
+			<div class="interface__controls">
+				<button
+					id="startBtn"
+					class="interface__button interface__button--green interface__button--blink"
+				>
+					Start
+				</button>
+				<button id="changeBetBtn" class="interface__button">Cha. Bet</button>
+				<button id="maxBetBtn" class="interface__button">Max Bet</button>
+				<button
+					id="autoStartBtn"
+					class="interface__button interface__button--green"
+				>
+					Auto Start
+				</button>
+				<div id="balanceFrame" class="interface__frame" data-name="Credits">
+					<p>2</p>
+					<span>00</span>
+				</div>
+				<div
+					id="lastWinFrame"
+					class="interface__frame interface__frame--right"
+					data-name="Last win"
+				>
+					<p>2</p>
+					<span>00</span>
+				</div>
+				<div id="betFrame" class="interface__frame" data-name="Bet">
+					<p>2</p>
+					<span>00</span>
+				</div>
+			</div>
+		</div>
+		<script type="module" src="/src/main.ts"></script>
+	</body>
+</html>
